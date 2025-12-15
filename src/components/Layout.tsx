@@ -1,8 +1,6 @@
-import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
-import { Trophy, Settings, Users, ClipboardList } from 'lucide-react'
-import { Toaster } from 'sonner'
-import { cn } from '../lib/utils'
+import { Link, Outlet } from "react-router-dom";
+import { Trophy, Settings, Users, ClipboardList } from "lucide-react";
+import { Toaster } from "sonner";
 
 export default function Layout() {
   return (
@@ -14,16 +12,28 @@ export default function Layout() {
             <span>Ranker</span>
           </Link>
           <div className="flex items-center gap-6 text-sm font-medium">
-            <Link to="/setup/teams" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <Link
+              to="/setup/teams"
+              className="flex items-center gap-2 hover:text-primary transition-colors"
+            >
               <Users className="h-4 w-4" /> Teams
             </Link>
-            <Link to="/setup/scoring" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <Link
+              to="/setup/scoring"
+              className="flex items-center gap-2 hover:text-primary transition-colors"
+            >
               <Settings className="h-4 w-4" /> Scoring
             </Link>
-            <Link to="/input" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <Link
+              to="/input"
+              className="flex items-center gap-2 hover:text-primary transition-colors"
+            >
               <ClipboardList className="h-4 w-4" /> Input
             </Link>
-            <Link to="/rank" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <Link
+              to="/rank"
+              className="flex items-center gap-2 hover:text-primary transition-colors"
+            >
               <Trophy className="h-4 w-4" /> Ranker
             </Link>
           </div>
@@ -34,5 +44,5 @@ export default function Layout() {
         <Toaster />
       </main>
     </div>
-  )
+  );
 }
